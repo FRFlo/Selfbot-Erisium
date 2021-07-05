@@ -38,9 +38,18 @@ bot.on('login', () => {
 })
 
 client.on('error', console.log) // Log erreur discord
-bot.on('error', console.log)    // Log erreur mc
-bot.on('kicked', console.log)   // Log kick
-bot.on('banned', console.log)   // Log ban
+bot.on('error', (error) => { // Log Erreur MC
+  console.log(error)
+  Embed('Erreur !', `${client.user.tag} a été déconnecté (Erreur)`, 'FFFFFF')
+})
+bot.on('banned', (error) => { // Log Ban
+  console.log(error)
+  Embed('Erreur !', `${client.user.tag} a été déconnecté (Banni)`, 'FFFFFF')
+})
+bot.on('kicked', (error) => { // Log Kick
+  console.log(error)
+  Embed('Erreur !', `${client.user.tag} a été déconnecté (Expulsé)`, 'FFFFFF')
+})
 
 client.on('message', (message) => {
     if (message.author.bot || message.channel.id !== '831830059291377685') return   // Return si c'est le bot ou pas dans le bon channel
