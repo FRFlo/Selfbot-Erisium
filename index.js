@@ -8,9 +8,9 @@ const client = new Discord.Client()
 const bot = mineflayer.createBot({
     host: 'play.erisium.com',   // IP du serveur
     // port: '29228',           // Port du seveur
-    username: config.email,     // Email dans config.json
-    password: config.password,  // MDP dans config.json
-    // auth: 'microsoft',          // Méthode de connection (Microsoft ou Mojang)
+    username: config.login.email,     // Email dans config.json
+    password: config.login.password,  // MDP dans config.json
+    auth: config.login.mode,          // Méthode de connection
     version: '1.11.2',          // Version de connection du bot
   })
 

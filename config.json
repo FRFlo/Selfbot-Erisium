@@ -1,9 +1,12 @@
 {
     "token": "Votre token discord",
-    "email": "L'email du compte minecraft",
-    "password": "Mot de passe du compte minecraft",
-
     "logs-channel-id": "L'ID de votre channel de logs",
+
+    "login": {
+        "email": "L'email du compte minecraft",
+        "password": "Mot de passe du compte minecraft",
+        "mode": "microsoft ou mojang"
+    },
 
     "mumble": {
         "adress": "Adresse de votre serveur mumble",
